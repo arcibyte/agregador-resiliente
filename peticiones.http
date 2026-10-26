@@ -1,0 +1,55 @@
+@baseUrl = http://127.0.0.1:8000
+
+### 1. Comprobacion de salud del servicio agregador
+GET {{baseUrl}}/salud
+Accept: application/json
+
+### 2. Clima de ciudad encadenando 2 llamadas a Open-Meteo (1ra vez: API Externa, 2da vez: Caché TTL)
+GET {{baseUrl}}/v1/ciudades/Bucaramanga/clima
+Accept: application/json
+
+### 3. Ciudad inexistente en Open-Meteo (Devuelve 404 Not Found)
+GET {{baseUrl}}/v1/ciudades/CiudadFicticiaInexistenteXYZ999/clima
+Accept: application/json
+
+### 4. Parámetro inválido en ciudad (Devuelve 422 Unprocessable Entity)
+GET {{baseUrl}}/v1/ciudades/A/clima
+Accept: application/json
+
+### 5. Recorrido completo de paginación del servicio inestable tolerando 503, 429 y timeouts
+GET {{baseUrl}}/v1/sensores
+Accept: application/json
+
+### 6. Cursor inválido en servicio inestable (Devuelve 400 Bad Request sin reintentar)
+GET {{baseUrl}}/v1/sensores?cursor_inicial=cursor_corrupto_123
+Accept: application/json
+
+### 7. Lectura actual de un sensor existente (Devuelve 200 OK con reintentos selectivos)
+GET {{baseUrl}}/v1/sensores/S-001/lectura
+Accept: application/json
+
+### 8. Lectura de un sensor inexistente (Devuelve 404 Not Found sin reintentar)
+GET {{baseUrl}}/v1/sensores/S-999/lectura
+Accept: application/json
+
+### 9. Creación idempotente de alerta - Primera petición (Crea alerta)
+POST {{baseUrl}}/v1/alertas
+Content-Type: application/json
+Idempotency-Key: alerta-unica-lab1-2026
+
+{
+  "sensor_id": "S-001",
+  "severidad": "alta",
+  "mensaje": "Temperatura crítica detectada en Laboratorio 1"
+}
+
+### 10. Creación idempotente de alerta - Segunda petición repetida (Misma respuesta, no duplica)
+POST {{baseUrl}}/v1/alertas
+Content-Type: application/json
+Idempotency-Key: alerta-unica-lab1-2026
+
+{
+  "sensor_id": "S-001",
+  "severidad": "alta",
+  "mensaje": "Temperatura crítica detectada en Laboratorio 1"
+}

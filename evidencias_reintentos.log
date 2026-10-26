@@ -1,0 +1,81 @@
+# REGISTROS DEL SERVICIO AGREGADOR (app/services/sensores_client.py)
+
+[16:42:10.120] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores params=None
+[16:42:12.624] [WARNING] [agregador_resiliente] [Intento 1/6] Timeout detectado (> 2.5s) en /sensores. Backoff exponencial con jitter (techo=0.40s): esperando 0.14s...
+[16:42:12.768] [INFO] [agregador_resiliente] [Intento 2/6] GET http://127.0.0.1:9000/sensores params=None
+[16:42:12.772] [WARNING] [agregador_resiliente] [Intento 2/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=0.80s): esperando 0.42s...
+[16:42:13.190] [INFO] [agregador_resiliente] [Intento 3/6] GET http://127.0.0.1:9000/sensores params=None
+[16:42:13.194] [WARNING] [agregador_resiliente] [Intento 3/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=1.60s): esperando 1.26s...
+[16:42:14.450] [INFO] [agregador_resiliente] [Intento 4/6] GET http://127.0.0.1:9000/sensores params=None
+[16:42:14.454] [INFO] [agregador_resiliente] [Intento 4/6] ÉXITO 200 en /sensores (params=None)
+[16:42:14.462] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzo1'}
+[16:42:16.966] [WARNING] [agregador_resiliente] [Intento 1/6] Timeout detectado (> 2.5s) en /sensores. Backoff exponencial con jitter (techo=0.40s): esperando 0.31s...
+[16:42:17.278] [INFO] [agregador_resiliente] [Intento 2/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzo1'}
+[16:42:19.782] [WARNING] [agregador_resiliente] [Intento 2/6] Timeout detectado (> 2.5s) en /sensores. Backoff exponencial con jitter (techo=0.80s): esperando 0.61s...
+[16:42:20.394] [INFO] [agregador_resiliente] [Intento 3/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzo1'}
+[16:42:20.398] [WARNING] [agregador_resiliente] [Intento 3/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=1.60s): esperando 0.75s...
+[16:42:21.149] [INFO] [agregador_resiliente] [Intento 4/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzo1'}
+[16:42:23.653] [WARNING] [agregador_resiliente] [Intento 4/6] Timeout detectado (> 2.5s) en /sensores. Backoff exponencial con jitter (techo=3.20s): esperando 2.58s...
+[16:42:26.233] [INFO] [agregador_resiliente] [Intento 5/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzo1'}
+[16:42:26.237] [WARNING] [agregador_resiliente] [Intento 5/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=6.40s): esperando 3.46s...
+[16:42:29.694] [INFO] [agregador_resiliente] [Intento 6/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzo1'}
+[16:42:29.698] [INFO] [agregador_resiliente] [Intento 6/6] ÉXITO 200 en /sensores (params={'cursor': 'bzo1'})
+[16:42:29.706] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoxMA=='}
+[16:42:29.710] [WARNING] [agregador_resiliente] [Intento 1/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=0.40s): esperando 0.12s...
+[16:42:29.834] [INFO] [agregador_resiliente] [Intento 2/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoxMA=='}
+[16:42:29.838] [INFO] [agregador_resiliente] [Intento 2/6] ÉXITO 200 en /sensores (params={'cursor': 'bzoxMA=='})
+[16:42:29.846] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoxNQ=='}
+[16:42:29.850] [WARNING] [agregador_resiliente] [Intento 1] Recibido 429 Too Many Requests con cabecera Retry-After=2s. Respetando espera de 2.19s...
+[16:42:32.041] [INFO] [agregador_resiliente] [Intento 2/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoxNQ=='}
+[16:42:32.045] [INFO] [agregador_resiliente] [Intento 2/6] ÉXITO 200 en /sensores (params={'cursor': 'bzoxNQ=='})
+[16:42:32.053] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoyMA=='}
+[16:42:32.057] [WARNING] [agregador_resiliente] [Intento 1/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=0.40s): esperando 0.11s...
+[16:42:32.172] [INFO] [agregador_resiliente] [Intento 2/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoyMA=='}
+[16:42:32.176] [WARNING] [agregador_resiliente] [Intento 2/6] Recibido 503 Service Unavailable en /sensores. Backoff exponencial con jitter (techo=0.80s): esperando 0.75s...
+[16:42:32.929] [INFO] [agregador_resiliente] [Intento 3/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'bzoyMA=='}
+[16:42:32.933] [INFO] [agregador_resiliente] [Intento 3/6] ÉXITO 200 en /sensores (params={'cursor': 'bzoyMA=='})
+[16:42:33.441] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores/S-999/lectura params=None
+[16:42:33.446] [WARNING] [agregador_resiliente] [Intento 1/6] Error 404 legítimo en /sensores/S-999/lectura. No es reintentable; abortando reintentos inmediatamente.
+[16:42:33.846] [INFO] [agregador_resiliente] [Intento 1/6] GET http://127.0.0.1:9000/sensores params={'cursor': 'cursor_invalido_xyz'}
+[16:42:33.851] [WARNING] [agregador_resiliente] [Intento 1/6] Error 400 legítimo en /sensores. No es reintentable; abortando reintentos inmediatamente.
+
+#REGISTROS DEL SERVICIO INESTABLE
+[16:42:10.124]       127.0.0.1 GET /sensores -> lenta (4.0 s)
+[16:42:12.772]       127.0.0.1 GET /sensores -> 503
+[16:42:13.194]       127.0.0.1 GET /sensores -> 503
+[16:42:14.454]       127.0.0.1 GET /sensores -> 200
+[16:42:14.466]       127.0.0.1 GET /sensores -> lenta (4.0 s)
+[16:42:17.282]       127.0.0.1 GET /sensores -> lenta (4.0 s)
+[16:42:20.398]       127.0.0.1 GET /sensores -> 503
+[16:42:21.153]       127.0.0.1 GET /sensores -> lenta (4.0 s)
+[16:42:26.237]       127.0.0.1 GET /sensores -> 503
+[16:42:29.698]       127.0.0.1 GET /sensores -> 200
+[16:42:29.710]       127.0.0.1 GET /sensores -> 503
+[16:42:29.838]       127.0.0.1 GET /sensores -> 200
+[16:42:29.850]       127.0.0.1 GET /sensores -> 429 (Retry-After: 2)
+[16:42:32.045]       127.0.0.1 GET /sensores -> 200
+[16:42:32.057]       127.0.0.1 GET /sensores -> 503
+[16:42:32.176]       127.0.0.1 GET /sensores -> 503
+[16:42:32.933]       127.0.0.1 GET /sensores -> 200
+[16:42:33.446]       127.0.0.1 GET /sensores/S-999/lectura -> 404
+[16:42:33.851]       127.0.0.1 GET /sensores -> 400
+[23:39:20.076] [INFO] [agregador_resiliente] [IDEMPOTENCIA] Nueva alerta creada: ALT-7E30553C (clave='clave-conflicto').
+[23:39:20.078] [WARNING] [agregador_resiliente] [IDEMPOTENCIA] Conflicto 409: la clave 'clave-conflicto' se reutilizó con un cuerpo de peticion diferente
+[23:39:20.080] [INFO] [agregador_resiliente] [IDEMPOTENCIA] Nueva alerta creada: ALT-E393BD9C (clave='clave-001').
+[23:39:20.080] [INFO] [agregador_resiliente] [IDEMPOTENCIA] Petición repetida detectada para clave 'clave-001'. Devolviendo alerta existente ALT-E393BD9C sin duplicar efectos.
+[23:41:14.630] [INFO] [agregador_resiliente] Agregador Resiliente iniciado. Servicio inestable configurado en: [http://127.0.0.1:9000](http://127.0.0.1:9000)
+[00:02:12.189] [INFO] [agregador_resiliente] [CACHE MISS] Consultando Open-Meteo (2 llamadas encadenadas) para 'Bucaramanga'...
+[00:02:14.066] [INFO] [agregador_resiliente] [CACHE HIT] Clima para 'Bucaramanga' servido desde caché en memoria.
+[00:02:14.069] [INFO] [agregador_resiliente] [CACHE MISS] Consultando Open-Meteo (2 llamadas encadenadas) para 'CiudadInexistenteXYZ98765'...
+[00:02:14.262] [INFO] [agregador_resiliente] [Intento 1/6] GET [http://127.0.0.1:9000](http://127.0.0.1:9000)/sensores params=None
+[00:02:14.262] [WARNING] [agregador_resiliente] [Intento 1/6] Error de red (Request URL is missing an 'http://' or 'https://' protocol.). Reintentando en 0.36s...
+[00:02:14.622] [INFO] [agregador_resiliente] [Intento 2/6] GET [http://127.0.0.1:9000](http://127.0.0.1:9000)/sensores params=None
+[00:02:14.622] [WARNING] [agregador_resiliente] [Intento 2/6] Error de red (Request URL is missing an 'http://' or 'https://' protocol.). Reintentando en 0.74s...
+[00:02:15.363] [INFO] [agregador_resiliente] [Intento 3/6] GET [http://127.0.0.1:9000](http://127.0.0.1:9000)/sensores params=None
+[00:02:15.364] [WARNING] [agregador_resiliente] [Intento 3/6] Error de red (Request URL is missing an 'http://' or 'https://' protocol.). Reintentando en 0.28s...
+[00:02:15.641] [INFO] [agregador_resiliente] [Intento 4/6] GET [http://127.0.0.1:9000](http://127.0.0.1:9000)/sensores params=None
+[00:02:15.642] [WARNING] [agregador_resiliente] [Intento 4/6] Error de red (Request URL is missing an 'http://' or 'https://' protocol.). Reintentando en 1.71s...
+[00:02:17.357] [INFO] [agregador_resiliente] [Intento 5/6] GET [http://127.0.0.1:9000](http://127.0.0.1:9000)/sensores params=None
+[00:02:17.357] [WARNING] [agregador_resiliente] [Intento 5/6] Error de red (Request URL is missing an 'http://' or 'https://' protocol.). Reintentando en 5.86s...
+[00:02:23.220] [INFO] [agregador_resiliente] [Intento 6/6] GET [http://127.0.0.1:9000](http://127.0.0.1:9000)/sensores params=None
+[00:02:23.221] [ERROR] [agregador_resiliente] [Intento 6/6] Error de conexión definitivo con el servicio inestable: Request URL is missing an 'http://' or 'https://' protocol.
